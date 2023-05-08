@@ -1,6 +1,5 @@
 // The Strategy Pattern Example Use Case
-
-class GameCharacterConcept {
+class GameCharacter {
     // This is the context whose strategy will change
 
     #position: [number, number] = [0, 0]
@@ -21,7 +20,7 @@ interface IMove {
     move(position: [number, number]): void
 }
 
-class WalkingMove implements IMove {
+class Walking implements IMove {
     // A concrete movement strategy for walking
 
     move(position: [number, number]) {
@@ -30,7 +29,7 @@ class WalkingMove implements IMove {
     }
 }
 
-class SprintingMove implements IMove {
+class Sprinting implements IMove {
     // A concrete movement strategy for sprinting
 
     move(position: [number, number]) {
@@ -39,7 +38,7 @@ class SprintingMove implements IMove {
     }
 }
 
-class CrawlingMove implements IMove {
+class Crawling implements IMove {
     // A concrete movement strategy for crawling
 
     move(position: [number, number]) {
@@ -49,10 +48,10 @@ class CrawlingMove implements IMove {
 }
 
 // The Client
-const GAME_CHARACTER_EX = new GameCharacter()
+const GAME_CHARACTER = new GameCharacter()
 
-GAME_CHARACTER.move(WalkingMove)
+GAME_CHARACTER.move(Walking)
 // Character sees the enemy
-GAME_CHARACTER.move(SprintingMove)
+GAME_CHARACTER.move(Sprinting)
 // Character finds a small cave to hide in
-GAME_CHARACTER.move(CrawlingMove)
+GAME_CHARACTER.move(Crawling)
