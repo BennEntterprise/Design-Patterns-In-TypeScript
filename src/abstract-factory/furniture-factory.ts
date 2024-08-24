@@ -1,11 +1,11 @@
 // Abstract Furniture Factory
 
-import {IChair} from './chair'
+import { IChair } from './chair'
 import ChairFactory from './chair-factory'
-import {ITable} from './table'
+import { ITable } from './table'
 import TableFactory from './table-factory'
 
-interface IFurniture extends IChair, ITable {}
+export interface IFurniture extends IChair, ITable { }
 
 export default class FurnitureFactory {
     static getFurniture(furniture: string): IFurniture | undefined {
