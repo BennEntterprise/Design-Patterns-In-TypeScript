@@ -1,13 +1,12 @@
 {
     "compilerOptions": {
-      "strict": true,
-      "target": "ES2015",
-      "module": "CommonJS",
-      "outDir": "../dist",
-      "rootDir": "./",
-      "moduleResolution": "node"
+        "strict": true,
+        "target": "ES2015",
+        "module": "CommonJS",
+        "outDir": "../dist",
+        "rootDir": "./",
+        "moduleResolution": "node"
     },
-    "include": [
-      "**/*.ts"
-    ]
-  }
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules"]
+}
