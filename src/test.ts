@@ -24,3 +24,6 @@ console.log(b)
 let c: { [id: number]: number[] }
 c = { 1: [1, 2, 3], 2: [4, 5, 6], 3: [7, 8, 9], 4: [10, 11, 12] }
 console.log(c)
+
+const add = (a: number, b: number) => a + b
+const subtract = (a: number, b: number) => a - b
