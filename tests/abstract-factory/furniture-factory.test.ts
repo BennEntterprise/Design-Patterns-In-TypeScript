@@ -37,7 +37,6 @@ describe('FurnitureFactory', () => {
             { furniture: 'BigChair', expected: 'BigChair' },
         ])('it accepts $furniture and will call the correct factory to make that $furniture', ({ furniture, expected }) => {
             FurnitureFactory.getFurniture(furniture);
-
             expect(ChairFactory.getChair).toHaveBeenCalledTimes(1)
             expect(TableFactory.getTable).not.toHaveBeenCalled();
             jest.resetAllMocks();
@@ -49,32 +48,9 @@ describe('FurnitureFactory', () => {
             { furniture: 'BigTable', expected: 'BigTable' },
         ])('it accepts $furniture and will call the correct factory to make that $furniture', ({ furniture, expected }) => {
             FurnitureFactory.getFurniture(furniture);
-
             expect(TableFactory.getTable).toHaveBeenCalledTimes(1)
             expect(ChairFactory.getChair).not.toHaveBeenCalled();
         });
-
-        it('accepts a string parameter representing a furniture type', () => {
-            // expect(FurnitureFactory.getFurniture('SmallChair')).toBeDefined();
-            // expect(ChairFactory.getChair).toHaveBeenCalledTimes(1)
-            // expect(ChairFactory.getChair).toHaveBeenCalledWith('SmallChair');)
-            // expect(TableFactory.getTable).not.toHaveBeenCalled();
-
-            // expect(FurnitureFactory.getFurniture('MediumChair')).toBeDefined();
-            // expect(ChairFactory.getChair).toHaveBeenCalledTimes(2)
-
-            // expect(FurnitureFactory.getFurniture('BigChair')).toBeDefined();
-            // expect(ChairFactory.getChair).toHaveBeenCalledTimes(3)
-
-            // expect(FurnitureFactory.getFurniture('SmallTable')).toBeDefined();
-            // expect(TableFactory.getTable).toHaveBeenCalledTimes(1)
-
-            // expect(FurnitureFactory.getFurniture('MediumTable')).toBeDefined();
-            // expect(TableFactory.getTable).toHaveBeenCalledTimes(2)
-
-            // expect(FurnitureFactory.getFurniture('BigTable')).toBeDefined();
-            // expect(TableFactory.getTable).toHaveBeenCalledTimes(3)
-        })
 
         it('Will log `No Factory Found` if passed an unrecognizable furniture type', () => {
             const badFurniture = FurnitureFactory.getFurniture('UnrecognizableFurniture');
