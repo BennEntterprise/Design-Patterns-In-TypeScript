@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "build:src": "tsc -p ./src",
-    "build:test": "tsc -p ./tests"
+    "build:tests": "tsc -p ./tests"
   },
   "repository": {
     "type": "git",
