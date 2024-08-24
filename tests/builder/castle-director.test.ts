@@ -1,10 +1,11 @@
 
-        import { describe, expect, test } from '@jest/globals';
-        // import * as SUT from '';
+import { describe, expect, it, jest, test } from '@jest/globals';
+import CastleDirector from '../../src/builder/castle-director';
 
-        describe('SYSTEM_UNDER_TEST', () => {
-            test.skip('should do something', () => {
-                expect('SYSTEM_UNDER_TEST').toBeDefined();
-            });
-        });
-    
+
+describe('CastleDirector', () => {
+    it('has one static method construct', () => {
+        expect(CastleDirector).toHaveProperty('construct');
+        expect(typeof CastleDirector.construct).toBe('function');
+    })
+});
