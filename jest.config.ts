@@ -32,7 +32,13 @@ const config: Config = {
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
     "/node_modules/",
-    "/dist/"
+    "/dist/",
+    // Ignore .d.ts files
+    ".*.d.ts",
+    // Ignore index.ts files
+    ".*-concept.*.ts",
+    // Ignore the client files
+    "client.ts"
   ],
 
   // Indicates which provider should be used to instrument code for coverage
