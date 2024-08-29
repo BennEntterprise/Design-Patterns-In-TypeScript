@@ -1,5 +1,5 @@
 
-import { describe, expect, it, test } from '@jest/globals';
+import { describe, expect, it } from '@jest/globals';
 import BigChair from '../../src/abstract-factory/big-chair';
 
 describe('BigChair', () => {
