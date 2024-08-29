@@ -7,6 +7,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:coverage:open": "jest --coverage && open ./coverage/lcov-report/index.html",
+    "tco": "npm run test:coverage:open",
     "build": "npm run build:src && npm run build:tests",
     "build:src": "tsc -p ./src",
     "build:tests": "tsc -p ./tests"
