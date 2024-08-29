@@ -49,10 +49,6 @@ jest.mock('../../src/abstract-factory/small-chair', () => {
 })
 
 describe('ChairFactory', () => {
-    beforeEach(() => {
-
-    })
-
     afterEach(() => {
         jest.clearAllMocks();
     })
