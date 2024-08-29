@@ -21,9 +21,12 @@ jest.mock('../../src/builder/house-builder', () => {
 });
 
 describe('CastleDirector', () => {
-    let mockHouseBuilder: any;
+    let mockHouseBuilder: HouseBuilder | undefined;
+    let house: House | undefined;
+
     beforeEach(() => {
         mockHouseBuilder = new HouseBuilder();
+        house = CastleDirector.construct();
     })
 
     afterEach(() => {
@@ -36,12 +39,11 @@ describe('CastleDirector', () => {
     })
 
     it('calls HouseBuilder with castle properties', () => {
-        const house = CastleDirector.construct();
-        expect(mockHouseBuilder.setBuildingType).toHaveBeenCalledWith('Castle');
-        expect(mockHouseBuilder.setWallMaterial).toHaveBeenCalledWith('Sandstone');
-        expect(mockHouseBuilder.setNumberDoors).toHaveBeenCalledWith(100);
-        expect(mockHouseBuilder.setNumberWindows).toHaveBeenCalledWith(200);
-        expect(mockHouseBuilder.getResult).toHaveBeenCalled();
+        expect(mockHouseBuilder?.setBuildingType).toHaveBeenCalledWith('Castle');
+        expect(mockHouseBuilder?.setWallMaterial).toHaveBeenCalledWith('Sandstone');
+        expect(mockHouseBuilder?.setNumberDoors).toHaveBeenCalledWith(100);
+        expect(mockHouseBuilder?.setNumberWindows).toHaveBeenCalledWith(200);
+        expect(mockHouseBuilder?.getResult).toHaveBeenCalled();
         expect(house).toBeInstanceOf(House);
 
     })
