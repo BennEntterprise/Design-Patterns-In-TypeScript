@@ -15,10 +15,7 @@ jest.mock('../../src/abstract-factory/table-factory', () => ({
 
 
 describe('FurnitureFactory', () => {
-    let FurnitureFactoryInstance: FurnitureFactory;
-
     beforeEach(() => {
-        FurnitureFactoryInstance = new FurnitureFactory();
         jest.spyOn(console, 'log').mockImplementation(() => undefined);
     })
 
