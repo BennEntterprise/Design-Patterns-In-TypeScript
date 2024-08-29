@@ -62,5 +62,9 @@ describe('TableFactory', () => {
             expect(SmallTable).toHaveBeenCalled()
         })
 
+        test('when passed a bad string it will throw an error', () => {
+            expect(() => TableFactory.getTable("BADTABLEDESIGN")).toThrowError('No Table Found');
+        })
+
     })
 })

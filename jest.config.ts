@@ -40,7 +40,7 @@ const config: Config = {
     // Ignore the client files
     "client.ts",
     // Ignore non-concrete examples in abstract-factory
-    ".*/abstract-factory/factory-(a|b).test.ts"
+    "factory-(a|b).ts"
   ],
 
   // Indicates which provider should be used to instrument code for coverage
