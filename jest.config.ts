@@ -38,7 +38,9 @@ const config: Config = {
     // Ignore index.ts files
     ".*-concept.*.ts",
     // Ignore the client files
-    "client.ts"
+    "client.ts",
+    // Ignore non-concrete examples in abstract-factory
+    ".*/abstract-factory/factory-(a|b).test.ts"
   ],
 
   // Indicates which provider should be used to instrument code for coverage
