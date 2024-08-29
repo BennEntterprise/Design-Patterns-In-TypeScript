@@ -7,6 +7,7 @@ export default class House {
     buildingType = ''
 
     construction(): string {
+        // console.info('A house was created...')
         return `This is a ${this.wallMaterial} ${this.buildingType} with ${this.doors} door(s) and ${this.windows} window(s).`
     }
 }

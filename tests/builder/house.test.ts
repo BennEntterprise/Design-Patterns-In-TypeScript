@@ -1,10 +1,14 @@
-import { afterEach, beforeEach, describe, expect, it, test } from '@jest/globals';
+import { afterEach, beforeEach, describe, expect, it, jest, test } from '@jest/globals';
 import House from '../../src/builder/house';
 
 describe('House', () => {
     let house: House | undefined;
+
     beforeEach(() => {
         house = new House();
+        // console.log(console.info)
+        // jest.spyOn(console, 'info').mockImplementation(() => undefined)
+        // console.log(console.info)
     })
     afterEach(() => {
         house = undefined;
@@ -24,5 +28,11 @@ describe('House', () => {
         const constructionOutput = house?.construction();
         expect(typeof constructionOutput).toBe('string');
         expect(constructionOutput?.split(' ')).toEqual(expect.arrayContaining(expectedKeywordsInOutput));
+        // (console.info as any).mockRestore()
     })
+    // it('prints an info string to the console.info', () => {
+    //     // (console.info as any).mockRestore()
+    //     expect(console.info).toHaveBeenCalled();
+    //     // (console.info as any).mockRestore()
+    // })
 });
